@@ -11,6 +11,9 @@
   </div>
 
   <div class="ui container settings-content">
+    <h1 class="ui header">
+      Settings
+    </h1>
     <form id="mainForm" class="ui form">
       <div class="ui secondary pointing menu">
         <div class="item active" data-tab="application" id="application-tab">Application</div>

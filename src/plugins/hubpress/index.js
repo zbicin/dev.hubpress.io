@@ -41,6 +41,15 @@ export function hubpressPlugin(context) {
           _.merge(state, nextState)
         },
         [POST_GET](state, nextState) {
+          if (!nextState.post.content) {
+            nextState.post.content = `// = Your Blog title
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+// :published_at: 2019-01-31
+// :hp-tags: HubPress, Blog, Open_Source,
+// :hp-alt-title: My English Title
+`
+          }
           state.post = nextState.post
         },
         [POST_CHANGE_CONTENT](state, content) {
